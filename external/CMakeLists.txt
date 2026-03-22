@@ -1,0 +1,2 @@
+add_subdirectory(sqlite3mc)
+add_subdirectory(StringObfuscator)

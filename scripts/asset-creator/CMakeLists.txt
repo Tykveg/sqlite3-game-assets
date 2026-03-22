@@ -1,0 +1,6 @@
+project(bhh_sqlite3_game_assets_creator CXX)
+include(../shared_functions.cmake)
+add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
+bhh_assets_get_scripts_dir(scripts_dir)
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${scripts_dir}/asset-creator)
+target_link_libraries(${PROJECT_NAME} PUBLIC bhh_sqlite3_game_assets)
